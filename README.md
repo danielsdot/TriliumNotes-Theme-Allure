@@ -1,5 +1,5 @@
 [Original Repository of this theme](https://github.com/JadeVane/Allure)
-> Tested on: `TriliumNext 0.100.0` but not complete :)
+> Tested on: [TriliumNext 0.100.0](https://github.com/TriliumNext/Trilium/releases/tag/v0.100.0) but not complete :)
 
 ## Preview
 ![Screenshot](./resources/screenshot.png)
