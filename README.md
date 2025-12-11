@@ -24,5 +24,5 @@
 > How to upgrade?
 > Copy the latest CSS file content and replace Allure-icon.woff2 in it. If other fonts are updated, other font files also need to be replaced.
 ## Enable Allure Theme
-1. Go to Menu > Options, and select `Allure-clear` / `Allure-night` as your new theme
+1. Go to Menu > Options > Appereance, and select `Allure-clear`/`Allure-night` as your new theme
 1. Press `F5` or `Ctrl` + `R` to reload the page
