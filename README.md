@@ -1,4 +1,4 @@
-Original Repository of this theme
+[Original Repository of this theme](https://github.com/JadeVane/Allure)
 > Tested on: `TriliumNext 0.100.0` but not complete :)
 
 ## Preview
