@@ -15,7 +15,7 @@
 1. Create a new note in trilium (of type **CSS**) named `Allure-night` *(the name of note depends on which theme you want to apply)*
 1. Pick a theme below, copy the content of it and paste it into the new note created above:
     <!-- - [Allure-night.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-Night.css) -->
-    - [Allure-night.css](./Allure-Night.css)
+    - [Allure-Night.css](./Allure-Night.css)
 1. Add `#appTheme=[theme_name]` attribute to the note
 1. Download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
 1. Add attribute `#customResourceProvider="font-name.suffix"` to each fonts
