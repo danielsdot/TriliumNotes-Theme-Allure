@@ -12,7 +12,7 @@
 > How to upgrade?
 > Delete the theme file and re-import the latest version.
 ### Manual installation
-1. Create a new note in trilium (of type **CSS**) named `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
+1. Create a new note in trilium (of type **CSS**) named `Allure-clear`/`Allure-night` *(the name of note depends on which theme you want to apply)*
 1. Pick a theme below, copy the content of it and paste it into the new note created above:
     <!-- - [Allure-clear.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-clear.css) -->
     - [Allure-clear.css](./Allure-clear.css)
