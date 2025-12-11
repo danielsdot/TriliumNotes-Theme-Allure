@@ -6,7 +6,7 @@
 
 # Steps by Steps
 ## Installation
-### Easy installation
+### Recommended
 1. Download `Allure-clear.zip` or `Allure-night.zip` in the release page, then right-click on any note and select "Import to note"
 2. Select the file you just downloaded and **uncheck Safe Import**, then click "Import"
 > How to upgrade?
