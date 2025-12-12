@@ -627,7 +627,7 @@ body .find-replace-widget {
     position: fixed;
     background: var(--main-background-color);
     transform: translateY(80vh);
-    width: 100%;
+    width: 73.5vw;
 }
 
 body #launcher-pane {
@@ -771,6 +771,24 @@ body #left-pane .dropdown-item:hover:not(.disabled) button {
     color: inherit;
 }
 
+body #left-pane input {
+    box-shadow: none;
+    border-bottom: var(--border-light);
+    height: var(--height-top-bar);
+    padding: 0 14px;
+    font-size: 14px !important;
+    margin-left: 1px;
+}
+
+body #left-pane .search-button {
+    display: none;
+}
+
+body #left-pane .quick-search input ::placeholder {
+    font-size: 12px;
+    color: var(--color-border);
+}
+
 body .ui-fancytree>li>ul {
     padding-left: 0;
 }
@@ -788,24 +806,6 @@ body .tree .fancytree-node:hover {
 
 body .tree .fancytree-node:hover {
     background-color: var(--color-background-secondary);
-}
-
-body #left-pane input {
-    box-shadow: none;
-    border-bottom: var(--border-light);
-    height: var(--height-top-bar);
-    padding: 0 14px;
-    font-size: 14px !important;
-    margin-left: 1px;
-}
-
-body #left-pane .search-button {
-    display: none;
-}
-
-body #left-pane .quick-search input ::placeholder {
-    font-size: 12px;
-    color: var(--color-border);
 }
 
 body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
