@@ -2,6 +2,12 @@
         Essa é minha alteração do tema encontrado no https://github.com/JadeVane/Allure
         Feito por https://github.com/danielsdot/TriliumNotes-Theme-Allure */
 
+/* Lista de Tarefas
+- Fixar o header juntamento com scroll
+- Ajustar o titulo e icones do header
+- Arrumar a visibilidade do botão de configuração rápida da árvore de notas
+*/
+
 @keyframes reveal {
   0% {
     opacity: 0%;
@@ -11,9 +17,6 @@
   }
 }
 
-.excalidraw.theme--dark {
-    --theme-filter: invert(80%) hue-rotate(180deg) !important;
-}
 @font-face {
     font-family: 'trilium-allure-icons';
     src: url('/custom/Allure-Icons.woff2') format('woff2');
@@ -32,6 +35,7 @@
     font-weight: 600;
     src: url('/custom/Monaco.ttf') format('ttf');
 }
+
 root {
     --theme-style: dark;
 }
@@ -209,14 +213,6 @@ body .btn:not(:disabled):not(.disabled).active {
     border: var(--border-transparent);
 }
 
-body #left-pane .btn:not(.btn-primary) {
-    border: var(--border-transparent);
-}
-
-body #left-pane .dropdown-item:hover:not(.disabled) button {
-    color: inherit;
-}
-
 body .btn.focus,
 body .btn:focus {
     box-shadow: unset !important;
@@ -229,6 +225,10 @@ body .note-icon-widget .icon-list {
 
 body .fancytree-custom-icon {
     margin-right: 10px;
+}
+
+span.fancytree-node.protected > span.fancytree-custom-icon {
+    filter: drop-shadow(0px 0px 5px #FFFFFF55);
 }
 
 body .title-bar-buttons div button {
@@ -298,6 +298,10 @@ body .fancytree-node:hover .add-note-button {
 
 body .tree-item-button:hover {
     border: var(--border-transparent);
+}
+
+div.tree {
+    height: 95vh;
 }
 
 body a,
@@ -617,6 +621,15 @@ body .find-box .find-input {
     border: none !important;
 }
 
+body .find-replace-widget {
+    padding: 10px;
+    z-index: 10;
+    position: fixed;
+    background: var(--main-background-color);
+    transform: translateY(80vh);
+    width: 100%;
+}
+
 body #launcher-pane {
     width: fit-content !important;
     padding: 4px 0;
@@ -665,14 +678,6 @@ body #launcher-pane .button-widget.icon-action.bx.component.bx-chevrons-right {
     margin-bottom: 8px;
 }
 
-/* Provavelmente o criador do tema removeu para minimalismo, mas achei estranho que essa opção de esconder não precisa de código
-body #launcher-pane .bx-search,
-body #launcher-pane .bx-send,
-body #launcher-pane .bx-map-alt {
-    display: none;
-}
-*/
-
 body #launcher-pane .icon-action.global-menu-button {
     background: unset;
 }
@@ -706,7 +711,6 @@ body .global-menu-button-update-available {
 }
 
 body .dropdown-menu .bx {
-    /*font-family: 'trilium-allure-icons' !important;*/
     top: unset !important;
 }
 
@@ -756,6 +760,15 @@ body .button-widget.bx.component.launcher-button.bx-history+.spacer {
 body #left-pane {
     border-left: var(--border-light);
     max-width: calc(35% - 2.5px);
+    min-width: calc(20% - 2.5px) !important;
+}
+
+body #left-pane .btn:not(.btn-primary) {
+    border: var(--border-transparent);
+}
+
+body #left-pane .dropdown-item:hover:not(.disabled) button {
+    color: inherit;
 }
 
 body .ui-fancytree>li>ul {
@@ -973,11 +986,6 @@ body .tab-row-widget .tab-row-widget-container .note-new-tab {
     margin: auto;
 }
 
-/*body .note-new-tab:before {
-    content: "\ebc0";
-    font-size: 14px;
-}*/
-
 body .tab-row-filler {
     transform: unset;
     display: inline-block;
@@ -991,11 +999,6 @@ body .tab-row-filler {
 body .note-detail,
 body .note-list-widget {
     margin: auto;
-    /*margin-bottom: 68px;*/
-}
-
-body .note-detail {
-    /*padding: var(--padding-inside-note-body);*/
 }
 
 body .CodeMirror {
@@ -1122,33 +1125,6 @@ span.button-widget.icon-action.bx.component.bx-x {
     margin-top: 16px;
 }
 
-/*
-body .ribbon-button-container>* {
-    top: 0;
-}
-
-body .ribbon-tab-title .bx,
-body .ribbon-button-container .icon-action {
-    font-size: 1.2em;
-    padding: 2px;
-}
-
-body .ribbon-button-container .icon-action.bx-history,
-body .ribbon-button-container .icon-action.bx-edit-alt {
-    padding: 8px;
-    margin: 0 4px;
-    display: inline-block !important;
-}
-
-body .ribbon-button-container .note-actions,
-body .ribbon-button-container .icon-action.bx-history {
-    margin: 0 4px;
-}
-
-body .ribbon-tab-spacer {
-    display: none;
-}
-*/
 body .backlinks-ticker {
     border-radius: var(--border-radius-standard);
 }
@@ -1164,41 +1140,6 @@ body .floating-buttons .floating-buttons-children .floating-button {
     padding: 4px;
     width: unset;
 }
-/*
-body .ribbon-tab-container .bx-calendar-edit:before {
-    content: "\ec71";
-}
-
-body .ribbon-tab-container .bx-table:before {
-    content: "\e634";
-}
-
-body .ribbon-tab-title[data-ribbon-component-name="similarNotes"],
-body .ribbon-tab-title[data-ribbon-component-name="notePaths"],
-body .ribbon-tab-spacer:nth-of-type(8),
-body .ribbon-tab-spacer:nth-of-type(12) {
-    display: none;
-}
-
-body .ribbon-tab-title,
-body .ribbon-tab-spacer,
-body .ribbon-button-container {
-    border: none;
-}
-
-body .ribbon-tab-title {
-    padding: 3px 8px !important;
-    box-sizing: border-box;
-}
-
-body .ribbon-tab-title:hover {
-    color: var(--main-text-color);
-}
-
-body .ribbon-tab-container {
-    justify-content: left;
-    margin-left: 0;
-}*/
 
 body .image-properties>div {
     margin: 0 !important;
@@ -1217,39 +1158,6 @@ body .note-info-widget-table tr>th:first-of-type,
 body .note-info-widget-table tr>td:first-of-type {
     display: none;
 }
-/*
-body .map-type-switcher,
-body .ribbon-tab-title.active .ribbon-tab-title-label {
-    display: none;
-}
-
-body .title-row>.bx-dock-right {
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-    font-size: 1.3em;
-    padding: 7px;
-    margin: 4px;
-}
-
-body .title-row .bx-dock-right:before {
-    font-family: 'trilium-allure-icons';
-    content: "\e657";
-}
-
-body .ribbon-tab-title.active {
-    border-bottom: none;
-    background-color: var(--color-background-primary);
-}
-
-body .ribbon-body.active {
-    margin: 0;
-    border: none;
-    border-radius: unset;
-    z-index: 9;
-    background-color: var(--color-background-primary);
-}
-*/
 
 .bx-tada {
     -webkit-animation: linear !important;
@@ -1312,30 +1220,7 @@ body .shared-info-widget {
     margin: 16px 0px;
     padding: 10px 16px;
 }
-/*
-body .ribbon-container {
-    position: fixed;
-    bottom: 0;
-    padding: 4px var(--padding-inside-note-body) 4px 42px;
-    margin: 0;
-    z-index: 9;
-    background-color: var(--color-background-secondary);
-    width: -webkit-fill-available;
-}
 
-body .ribbon-container .btn.btn-primary {
-    background: var(--color-button-accent);
-}
-
-body .ribbon-top-row {
-    width: fit-content;
-}
-
-body .ribbon-container .bx {
-    font-family: 'trilium-allure-icons' !important;
-    color: var(--color-text-primary);
-}
-*/
 body .bx-arrow-to-bottom,
 body .bx-arrow-to-top {
     font-size: 1em;
@@ -1369,8 +1254,6 @@ body .ck.ck-button.ck-switchbutton .ck-button__toggle {
 }
 
 body .ck-content hr {
-    /* por que? só mudou o espaço da linha de separação de um jeito estranho
-    margin: 48px 64px;*/
     height: 1px;
 }
 
@@ -1523,14 +1406,16 @@ body .note-list.grid-view .note-book-card {
     background: var(--color-background-secondary);
     border-radius: 6px;
     border: var(--border-light);
-    /*box-shadow: var(--shadow-card);*/
+}
+
+.note-book-card {
+    padding: 0px 0px 10px 0px;
 }
 
 body h5.note-book-header {
     font-size: inherit;
     font-weight: bold;
     margin-bottom: 0;
-    /*border-bottom: var(--border-light);*/
     padding: 10px 12px;
     background: var(--color-background-primary);
 }
@@ -1608,11 +1493,12 @@ body #center-pane .split-note-container-widget>.type-code {
     width: 100%;
     border-radius: var(--border-radius-standard);
 }
-/* "Comentei" esse por causa do CTRL+F bugado
+
+/* "Comentei" esse por causa do CTRL+F bugado*/
 body #center-pane .split-note-container-widget>div>div {
     overflow: unset !important;
 }
-*/
+
 body #center-pane .split-note-container-widget .scrolling-container {
     contain: size;
 }
@@ -1767,18 +1653,8 @@ body .split-note-container-widget>.component>.component:nth-of-type(7) {
     overflow: visible !important;
 }
 
-span.fancytree-node.protected > span.fancytree-custom-icon {
-    filter: drop-shadow(0px 0px 5px #FFFFFF55);
-}
-
 .ck-editor__editable.ck-content .todo-list .todo-list__label>span[contenteditable=false]>input:before {
     border: 1px solid var(--color-text-primary);
-}
-
-/* My fixes of Trilium Next 0.99.5 */
-
-div.tree {
-    height: 95vh;
 }
 
 body .dropdown-menu.dropend .bx {
@@ -1800,35 +1676,4 @@ div.scrolling-container {
 div.promoted-attributes-widget {
     margin-top: 10px;
     margin-bottom: 30px;
-}
-
-#left-pane.tree-actions {
-}
-/* Precisa ser consertado, Header fixo
-div.ribbon-container {
-    position: absolute;
-    background-color: var(--main-background-color);
-    min-width: 72vw;
-    max-wdith: 79vw;
-    padding-top: 2%;
-    margin-bottom: 5%;
-    top:130px;
-    margin: auto;
-    z-index: 50;
-}
-
-div.component.title-row {
-    background-color: var(--main-background-color);
-    z-index: 51;
-    position: absolute;
-    padding-bottom: 3%;
-    padding-top: 3%;
-    min-width: 72vw;
-    max-wdith: 79vw;
-    align-items: center;
-    top: 0;
-    } */
-
-.note-book-card {
-    padding: 0px 0px 10px 0px;
 }
