@@ -6,6 +6,7 @@
 - Fixar o header juntamento com scroll
 - Ajustar o titulo e icones do header
 - Arrumar a visibilidade do botão de configuração rápida da árvore de notas
+- Arrumar altura e amostragem dos paneis quando conteúdo novo do tipo painel de titulos, atributos da nota ultrapassa a tela e alguns botões ficam fora
 */
 
 @keyframes reveal {
@@ -1067,7 +1068,7 @@ body .note-detail-readonly-code {
     min-height: 0;
 }
 
-/* Estava tentando achar um meio de modificar o fundo transparente claro quando abre uma janela de aviso como Senha para ativar o modo segurança, deletar uma nota, mas não achei */
+/* Estava tentando achar um meio de modificar o fundo transparente claro quando abre uma janela de aviso como Senha para ativar o modo segurança, deletar uma nota, mas não achei, o fundo mistura com esse background claro com esse comando que escrevi */
 .modal.fade.mx-auto.component.show {
     background: #000000aa !important;
 }
