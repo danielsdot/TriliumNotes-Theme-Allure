@@ -2,7 +2,7 @@
 > Tested on: [TriliumNext 0.102.1](https://github.com/TriliumNext/Trilium/releases/tag/v0.102.1) but not complete :)
 
 ## Preview
-![Screenshot](./resources/screenshot.png)
+![Screenshot](./resources/screenshot2.png)
 
 # Steps by Steps
 ## Installation
