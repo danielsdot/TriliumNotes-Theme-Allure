@@ -382,8 +382,11 @@ Feito por https://github.com/danielsdot/TriliumNotes-Theme-Allure*/
   body .gutter.gutter-horizontal {
       margin-right: -5px;
       z-index: 9;
-      border-left: 1px solid var(--color-border);
-      background: unset;
+      /*background: unset;*/
+  }
+  
+  body .gutter {
+      background: transparent;
   }
   
   body .gutter.gutter-horizontal:hover {
@@ -475,12 +478,6 @@ Feito por https://github.com/danielsdot/TriliumNotes-Theme-Allure*/
   
   body .form-control {
       border: var(--border-standard);
-  }
-  
-  body form.protected-session-password-form {
-      padding: 16px;
-      background: var(--left-pane-background-color);
-      border-radius: 8px;
   }
   
   body .note-title-widget input.note-title {
@@ -872,6 +869,30 @@ Feito por https://github.com/danielsdot/TriliumNotes-Theme-Allure*/
       display: none;
   }
   
+  /* Sessão de proteção senha */
+  
+  body .tn-centered-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20vh;
+      justify-content: space-evenly;
+  }
+  
+  body .bx.bx-key::before {
+      content: "🔒︎";
+      font-size: 5vw;
+  }
+  
+  body form.protected-session-password-form {
+      padding: 16px;
+      background: var(--left-pane-background-color);
+      border-radius: 8px;
+      width: 35vw;
+      height: 35vh;
+      margin: auto;
+  }
+  
   /*Quick search*/
   /*body #left-pane .quick-search input ::placeholder {
       font-size: 12px;
@@ -1041,6 +1062,10 @@ Feito por https://github.com/danielsdot/TriliumNotes-Theme-Allure*/
       padding: 8px;
       border-radius: 16px;
       background-color: var(--main-background-color);
+  }
+  
+  body .component.title-row.note-split-title {
+      justify-content: center;
   }
   
   body .component.tab-row-container {
